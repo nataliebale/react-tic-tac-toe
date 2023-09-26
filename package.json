@@ -1,11 +1,13 @@
 {
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "^5.0.0"
   },
   "main": "/index.js",
   "devDependencies": {
+    "@babel/standalone": "^7.23.1",
     "react-scripts": "1.0.0"
   },
   "name": "vy6j3f",
