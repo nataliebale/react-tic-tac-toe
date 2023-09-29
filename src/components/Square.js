@@ -1,15 +1,9 @@
-import React, {useState} from 'react';
-function Square() {
-  const [value, setValue] = useState(null);
-
-  function handleClick() {
-    setValue('x');
-  }
-
+import React from 'react';
+function Square({value, onSquareClick}) {
   return (
     <button
       className="square"
-      onClick={handleClick}
+      onClick={onSquareClick}
     >
       {value}
     </button>
