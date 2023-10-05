@@ -8,7 +8,7 @@ export default function Board() {
     if(squares[i]) return;
 
     const nextSquares = squares.slice();
-    
+
     nextSquares[i] = xIsNext ? 'X' : 'O';
     setXIsNext(!xIsNext);
     setSquares(nextSquares);
