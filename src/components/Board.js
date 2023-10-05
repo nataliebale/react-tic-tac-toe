@@ -3,7 +3,8 @@ import Square from "./Square";
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
-
+  // const [history, setHistory] = useState([Array(9).fill(null)]);
+  // აქვარ
   const winner = calculateWinner(squares);
   let status;
 
