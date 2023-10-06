@@ -1,12 +1,20 @@
 import React, {useState} from 'react';
-import Square from "./components/Square";
 import Board from "./components/Board";
 
 export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  function handlePlay(nextSquares) {
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext)
+  }
+
   return (
     <div className="game">
       <div className="game-board">
-        <Board></Board>
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}></Board>
       </div>
       <div className="game-info">
         <ol>
