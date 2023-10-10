@@ -1,6 +1,6 @@
 import React from 'react';
 import Square from "./Square";
-export default function Board({ xIsNext, squares, onPlay }) {
+export default function Board({ xIsNext, squares, onPlay, currentMove }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -29,7 +29,7 @@ export default function Board({ xIsNext, squares, onPlay }) {
         <div key={row} className="board-row">
           {[0,1,2].map((col) => {
             const index = row * 3 + col;
-            return <Square key={index} value={squares[index]} onSquareClick={() => handleClick(index)} />
+            return <Square key={index} value={squares[index]} currentMove={currentMove} onSquareClick={() => handleClick(index)} />
           })}
         </div>
       ))}
